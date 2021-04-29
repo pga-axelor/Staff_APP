@@ -1,0 +1,17 @@
+package com.staff.request;
+
+import com.staff.service.staffdetails;
+
+public class staffrequest {
+  staffdetails sd;
+  
+  public staffrequest(staffdetails sd)
+  {
+	  this.sd=sd;
+  }
+  public void makerequest()
+  {
+	  sd.details();
+  }
+  
+}

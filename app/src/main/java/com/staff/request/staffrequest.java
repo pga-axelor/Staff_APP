@@ -1,0 +1,19 @@
+package com.staff.request;
+
+import com.google.inject.Inject;
+import com.staff.service.staffdetails_service;
+
+public class staffrequest {
+  staffdetails_service sd;
+  
+  @Inject
+  public staffrequest(staffdetails_service sd)
+  {
+	  this.sd=sd;
+  }
+  public void makerequest()
+  {
+	  sd.details();
+  }
+  
+}

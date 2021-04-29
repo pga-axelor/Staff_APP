@@ -1,0 +1,30 @@
+package com.staff.service;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import Staff.Employee;
+
+public class activestaffdetails implements staffdetails{
+
+	@Override
+	public void details() {
+		EntityManagerFactory emf=Persistence.createEntityManagerFactory("pu");  
+		EntityManager em=emf.createEntityManager();  
+
+		em.getTransaction().begin();   
+       /* Employee e=em.find(Employee.class,101);
+		System.out.println(e);*/
+		Query q= em.createNativeQuery("select e.e_id,e.e_name from employee e");
+		List <Object[]> staff=q.getResultList();
+        for(Object s: staff)
+        {
+        	System.out.println("SATFF" +s[0]+" "+s[1]);
+        }
+        em.getTransaction().commit();
+		
+	}
+
+}

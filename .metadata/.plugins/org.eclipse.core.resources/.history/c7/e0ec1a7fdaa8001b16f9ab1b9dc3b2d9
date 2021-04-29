@@ -1,0 +1,18 @@
+package com.staff.module;
+
+import com.google.inject.AbstractModule;
+import com.staff.service.activestaffdetails;
+import com.staff.service.retirestaff;
+import com.staff.service.staffdetails_service;
+
+public class Appmodule  extends AbstractModule{
+
+	@Override
+	protected void configure() {
+		bind(staffdetails_service.class).to(activestaffdetails.class);
+		bind(activestaffdetails.class).to(retirestaff.class);
+		
+	}
+	
+
+}

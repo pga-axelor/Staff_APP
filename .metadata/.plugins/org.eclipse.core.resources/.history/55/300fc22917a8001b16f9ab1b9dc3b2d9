@@ -1,0 +1,15 @@
+package com.staff.module;
+
+import com.google.inject.AbstractModule;
+import com.staff.service.staffdetails;
+
+public class Appmodule  extends AbstractModule{
+
+	@Override
+	protected void configure() {
+		bind(staffdetails.class).to(staffdetails.class)
+		
+	}
+	
+
+}
