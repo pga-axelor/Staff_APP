@@ -1,16 +1,17 @@
 package com.staff.module;
 
 import com.google.inject.AbstractModule;
-import com.staff.service.activestaffdetails_imp;
-import com.staff.service.retirestaff_imp;
-import com.staff.service.staffdetails_service;
+import com.google.inject.name.Names;
+import com.staff.service.ActiveStaffDetailsImp;
+import com.staff.service.RetireStaffDetailsImp;
+import com.staff.service.StaffDetailsService;
 
 public class Appmodule  extends AbstractModule{
 
 	@Override
 	protected void configure() {
-		bind(staffdetails_service.class).to(activestaffdetails_imp.class);
-	//	bind(activestaffdetails_imp.class).to(retirestaff_imp.class);
+		bind(StaffDetailsService.class).annotatedWith(Names.named("Active")).to(ActiveStaffDetailsImp.class).asEagerSingleton();
+		bind(StaffDetailsService.class).annotatedWith(Names.named("Retire")).to(RetireStaffDetailsImp.class).asEagerSingleton();
 		
 	}
 	

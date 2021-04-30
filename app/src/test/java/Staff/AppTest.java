@@ -4,6 +4,9 @@
 package Staff;
 
 import org.junit.Test;
+
+import com.staff.main.App;
+
 import static org.junit.Assert.*;
 
 public class AppTest {

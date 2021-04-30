@@ -21,3 +21,11 @@
 1619694176253	Rename type 'staffdetails'
 1619694195407	Rename type 'activestaffdetails'
 1619694210675	Rename type 'retirestaff'
+1619764521572	Rename package 'Staff'
+1619764551504	Move compilation unit
+1619764560559	Move compilation unit
+1619764564430	Delete element
+1619764662988	Rename type 'staffrequest'
+1619764689045	Rename type 'activestaffdetails_imp'
+1619764785896	Rename type 'retirestaff_imp'
+1619764829259	Rename type 'staffdetails_service'
